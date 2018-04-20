@@ -77,6 +77,10 @@ int main() {
 		TestCopyConstructor t(p);
 		cout << "----Calling void foo(t)------\n";
 		foo(t);
+		void (*fp) (TestCopyConstructor);
+		fp = foo;
+		fp(t);
+
 		cout << "----Returned to main after calling void foo(t)------\n";
 
 		cout << "----Calling t.print_str() from Main()------\n";
